@@ -21,4 +21,11 @@ const habitacionSchema = new Schema({
     }]
 })
 
+habitacionSchema.method.setImg= function set(filename){
+    this.img=`/public/${filename}`;
+}
+
 module.exports = model("Habitacion", habitacionSchema);
+
+
+//Instalar libreria multer
